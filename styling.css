@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+
+.table {
+    margin: 10px;
+
+}
+
+.sep {
+    padding-left: 10px;
+    padding-right: 10px;
+}
