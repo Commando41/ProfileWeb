@@ -1,6 +1,10 @@
+:root {
+    --cursorSize: 15px;
+}
+
 body {
-    text-align: center;
-    background-color: lightblue;
+    text-align: center;           
+    background-color: #00A98D;
 }
 
 .table {
@@ -11,4 +15,40 @@ body {
 .sep {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.cursor {
+    --color: #EA9200;
+    background: var(--color,#EA9200);
+    z-index: 999;
+    width: var(--cursorSize, 20px);
+    height: var(--cursorSize, 20px);
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 0px 8px 3px var(--color,#EA9200);
+    animation: colors 5s infinite;
+}
+
+.cursor:before{
+    content: '';
+    position: fixed;
+    background: #EA9200;
+    width: var(--cursorSize, 20px);
+    height: var(--cursorSize, 20px);
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0);
+    }
+    50%{
+        filter: hue-rotate(1rad);
+    }
+    100%{
+        filter: hue-rotate(1turn);
+    }
 }
