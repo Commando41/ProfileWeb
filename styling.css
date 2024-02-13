@@ -18,20 +18,23 @@ body {
 }
 
 .cursor {
+    display: none;
     --color: #EA9200;
     background: var(--color,#EA9200);
-    z-index: 999;
+    z-index: -1;
+    position: fixed;
     width: var(--cursorSize, 20px);
     height: var(--cursorSize, 20px);
     border-radius: 50%;
     border: 2px solid #ffffff;
     box-shadow: 0px 0px 8px 3px var(--color,#EA9200);
     animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
 }
-
+/*
 .cursor:before{
     content: '';
-    position: fixed;
+    position: absolute;
     background: #EA9200;
     width: var(--cursorSize, 20px);
     height: var(--cursorSize, 20px);
@@ -40,7 +43,7 @@ body {
     border-radius: 50%;
     border: 2px solid #ffffff;
 }
-
+*/
 @keyframes colors {
     0%{
         filter: hue-rotate(0);

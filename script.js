@@ -1,6 +1,7 @@
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
+    cursor.style.display = "block";
     let x = e.pageX;
     let y = e.pageY;
 
