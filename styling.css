@@ -5,6 +5,8 @@
 body {
     text-align: center;           
     background-color: #00A98D;
+    background-image: url("cool-background.png");
+    background-size: contain;
 }
 
 .table {
@@ -54,4 +56,9 @@ body {
     100%{
         filter: hue-rotate(1turn);
     }
+}
+
+#profilePic {
+    width: 60%;
+    height: 60%;
 }
